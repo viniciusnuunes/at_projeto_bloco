@@ -11,10 +11,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -74,7 +72,8 @@ public class QuizActivity extends AppCompatActivity {
         else intent.putExtra("acertou", false);
         intent.putExtra("pontos", pontos);
         startActivity(intent);
-        rb.setChecked(false);
+        
+        rgRespostas.clearCheck();
     }
 
     private void carregarQuestao(){
