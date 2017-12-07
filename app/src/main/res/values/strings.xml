@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Quiz</string>
-    <string name="txtExplicativo">O jogo é composto de 10 perguntas sobre os memes da atualidade \n\nTeste seu conhecimento sobre memes e desafie seus amigos :)</string>
+    <string name="txtExplicativo">O jogo é composto de 10 perguntas aleatórias sobre programação \n\nTeste sua lógica de programação e desafie seus amigos :)</string>
     <string name="btnJogarString">Jogar</string>
     <string name="btnJogarNovamenteString">Jogar Novamente</string>
     <string name="acertou">Acertou!</string>
+    <string name="splash_presentation">Apresenta</string>
+    <string name="imgLogo">Logo do Time</string>
 </resources>

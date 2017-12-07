@@ -4,27 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background2"
     tools:context="com.example.viniciusnunes.memequiz.QuizActivity"
-    tools:layout_editor_absoluteY="25dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="25dp">
 
     <TextView
         android:id="@+id/pergunta"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
         android:layout_marginEnd="42dp"
-        android:layout_marginLeft="42dp"
-        android:layout_marginRight="42dp"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="244dp"
         android:text="Pergunta"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/rgRespostas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPergunta"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1" />
@@ -32,35 +31,35 @@
     <Button
         android:id="@+id/btnResponder"
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:background="@android:color/background_dark"
         android:onClick="btnResponderOnClick"
         android:text="Responder"
         android:textColor="@android:color/background_light"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgRespostas"
+        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        tools:layout_constraintRight_creator="1" />
 
     <ImageView
         android:id="@+id/imgPergunta"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="18dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:contentDescription=""
         app:layout_constraintBottom_toTopOf="@+id/pergunta"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/burro"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:srcCompat="@drawable/logo"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
@@ -69,17 +68,14 @@
     <RadioGroup
         android:id="@+id/rgRespostas"
         android:layout_width="0dp"
-        android:layout_height="176dp"
-        android:layout_marginBottom="23dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp"
         android:layout_marginStart="7dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btnResponder"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pergunta"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
@@ -91,7 +87,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/rbResposta2"
@@ -99,6 +96,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="RadioButton"
+            android:textSize="12sp"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="-114dp" />
 
@@ -107,14 +105,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textSize="12sp" />
 
         <RadioButton
             android:id="@+id/rbResposta4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            android:textSize="12sp" />
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
