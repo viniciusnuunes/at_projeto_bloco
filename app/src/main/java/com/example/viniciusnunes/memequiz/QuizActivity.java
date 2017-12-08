@@ -1,5 +1,7 @@
 package com.example.viniciusnunes.memequiz;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -63,18 +65,29 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     public void btnResponderOnClick(View v){
-        RadioButton rb = (RadioButton)findViewById(rgRespostas.getCheckedRadioButtonId());
-        Intent intent = new Intent(this, RespostaActivity.class);
-        if(rgRespostas.getCheckedRadioButtonId() == respostaCerta) {
-            intent.putExtra("acertou", true);
-            pontos++;
-        }
-        else intent.putExtra("acertou", false);
-        intent.putExtra("pontos", pontos);
-        startActivity(intent);
+        if ( rgRespostas.getCheckedRadioButtonId() != -1 ) {
+            RadioButton rb = (RadioButton) findViewById(rgRespostas.getCheckedRadioButtonId());
+            Intent intent = new Intent(this, RespostaActivity.class);
+            if (rgRespostas.getCheckedRadioButtonId() == respostaCerta) {
+                intent.putExtra("acertou", true);
+                pontos++;
+            } else intent.putExtra("acertou", false);
+            intent.putExtra("pontos", pontos);
+            startActivity(intent);
 
-        rgRespostas.clearCheck();
-        rbResposta1.setChecked(true);
+            rgRespostas.clearCheck();
+        } else {
+            AlertDialog alertDialog = new AlertDialog.Builder(QuizActivity.this).create();
+            alertDialog.setTitle("Ateção");
+            alertDialog.setMessage("Você deve marcar pelo menos uma opção!");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            alertDialog.show();
+        }
     }
 
     private void carregarQuestao(){
