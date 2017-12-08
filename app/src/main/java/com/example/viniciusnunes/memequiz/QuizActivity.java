@@ -74,6 +74,7 @@ public class QuizActivity extends AppCompatActivity {
         startActivity(intent);
 
         rgRespostas.clearCheck();
+        rbResposta1.setChecked(true);
     }
 
     private void carregarQuestao(){
