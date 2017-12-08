@@ -4,7 +4,9 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
@@ -34,7 +36,7 @@ public class QuizActivity extends AppCompatActivity {
             add(new Questao(R.drawable.questao6, "Qual a definição de bubble sort está correta?", R.id.rbResposta3, "A) O princípio do Bubblesort é a troca de vetores entre posições separadas, fazendo com que os valores mais altos ( ou mais baixos ) \"borbulhem\" para o final do arranjo (daí o nome Bubblesort).", "B) O princípio do Bubblesort é o agrupamento de valores entre posições consecutivas, fazendo com que os valores mais altos ( ou mais baixos ) \"borbulhem\" para o final do arranjo (daí o nome Bubblesort).", "C) O princípio do Bubblesort é a troca de valores entre posições consecutivas, fazendo com que os valores mais altos ( ou mais baixos ) \"borbulhem\" para o final do arranjo (daí o nome Bubblesort).", "D) Nenhuma das alternativas"));
             add(new Questao(R.drawable.questao7, "Qual o valor de a na seguinte expressão:", R.id.rbResposta3, "A) true;", "B) false;", "C) 20.", "D) 10."));
             add(new Questao(R.drawable.questao8, "Qual o nome dado a estrutura utilizada para gravar as características de uma classe?", R.id.rbResposta4, "A) Método.", "B) Caracter.", "C) Query.", "D) Atributo."));
-            add(new Questao(R.drawable.questao9, "Qual o tipo de retorno do método abaixo?", R.id.rbResposta1, "A) Vazio.", "B) String.", "C) Estático.", "D) Público."));
+            add(new Questao(R.drawable.questao9, "Qual o tipo de retorno do método acima?", R.id.rbResposta1, "A) Vazio.", "B) String.", "C) Estático.", "D) Público."));
             add(new Questao(R.drawable.questao10, "O que está sendo impresso?", R.id.rbResposta1, "A) [1,11,21,31,41,51,61,71,81,91,101,111,121,131,141,151,161,171,181,191];", "B) [1,11,21,31,41,51,61,71,81,91,101,111,112,131,141,151,161,171,181,191];", "C) [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];", "D) Nenhuma das anteriores."));
             add(new Questao(R.drawable.questao11,"O que é 'Pseudocódigo'?", R.id.rbResposta1, "A) Um bagulho muito louco", "Uma forma genérica de escrever um algoritmo, utilizando uma linguagem simples (nativa a quem o escreve, de forma a ser entendida por qualquer pessoa) sem necessidade de conhecer a sintaxe de uma linguagem de programação específica;", "Uma linguagem de programação Orientada a Objetos;", "Uma linguagem de programação não Orientada a Objetos;" ));
             add(new Questao(R.drawable.questao12, "Onde as variáveis ficam armazenadas?", R.id.rbResposta1, "A) Na memória RAM;", "B) No Disco Local C;", "C) Na memória do programador;", "D) No banco de dados;" ));
@@ -47,7 +49,6 @@ public class QuizActivity extends AppCompatActivity {
             add(new Questao(R.drawable.questao19, "Qual das seguintes variáveis só aceita números inteiros?", R.id.rbResposta3, "A) Single", "B) Double", "C) Integer", "D) String"));
             add(new Questao(R.drawable.questao20, "Qual a definição está correta?", R.id.rbResposta1, "A) É um conjunto de variáveis do mesmo tipo acessíveis com um único nome.", "B) É um conjunto de variáveis de tipos diferentes acessíveis com boolean.", "C) É uma variável contendo uma função.", "D) Nenhuma das anteriores"));
 
-
         }
     };
 
@@ -59,7 +60,7 @@ public class QuizActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         imgPergunta = (ImageView)findViewById(R.id.imgPergunta);
-        pergunta = (TextView)findViewById(R.id.pergunta);
+        pergunta    = (TextView)findViewById(R.id.pergunta);
         rgRespostas = (RadioGroup)findViewById(R.id.rgRespostas);
         rbResposta1 = (RadioButton)findViewById(R.id.rbResposta1);
         rbResposta2 = (RadioButton)findViewById(R.id.rbResposta2);
@@ -74,6 +75,7 @@ public class QuizActivity extends AppCompatActivity {
         carregarQuestao();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
     public void btnResponderOnClick(View v){
         if ( rgRespostas.getCheckedRadioButtonId() != -1 ) {
             RadioButton rb = (RadioButton) findViewById(rgRespostas.getCheckedRadioButtonId());
@@ -88,9 +90,9 @@ public class QuizActivity extends AppCompatActivity {
             rgRespostas.clearCheck();
         } else {
             AlertDialog alertDialog = new AlertDialog.Builder(QuizActivity.this).create();
-            alertDialog.setTitle("Ateção");
-            alertDialog.setMessage("Você deve marcar pelo menos uma opção!");
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+            alertDialog.setTitle("Atenção");
+            alertDialog.setMessage("Você deve marcar pelo menos uma opção");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ok",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
