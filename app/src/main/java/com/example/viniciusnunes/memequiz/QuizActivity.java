@@ -25,15 +25,15 @@ public class QuizActivity extends AppCompatActivity {
     List<Questao> questoes = new ArrayList<Questao>(){
         {
             add(new Questao(R.drawable.questao1, "Considerando o pseudocódigo", R.id.rbResposta3, "A) Lê um número negativo e mostra na tela o seu fatorial.", "B) Lê o fatorial e mostra o número na tela.", "C) Lê um número não negativo e mostra na tela o seu fatorial.", "D) Nenhuma das opções acima."));
-            add(new Questao(R.drawable.questao2,"Analise os trechos de código acima, escritos em uma linguagem de programação hipotética, fazendo uso dos comandos “while-do” (enquanto-faça) e “do-while” (faça-enquanto) e supondo que a, b e c foram declaradas anteriormente." + "\n \nQuais são os valores de a, b e c, após o término de cada trecho, se as variáveis a, b e c foram inicializadas com 3, 0 e 3, respectivamente, antes de cada trecho?", R.id.rbResposta1, "A) 3, 0 e 3   e   2, 1 e 4.", "B) 2, 1 e 1   e   2, 1 e 2.", "C) 1, 2 e 3   e   3, 2 e 3.", "D) 2, 1 e 3   e   1, 2 e 3."));
-            add(new Questao(R.drawable.questao3,"Considere o seguinte algoritmo, onde n é um inteiro positivo lido do teclado:", R.id.rbResposta4, "A) Constante;", "B) Logarítmica em n;", "C) Linear em n;", "D) Quadrática em n;"));
-            add(new Questao(R.drawable.questao4, "Sendo a e b variáveis inteiras em um programa, a expressão lógica", R.id.rbResposta3, "A) (a <= b);", "B) (a >= b);", "C) (a < b);", "D) (a > b);"));
+            add(new Questao(R.drawable.questao2,"Analise os trechos de código acima, escritos em uma linguagem de programação hipotética, fazendo uso dos comandos “while-do” (enquanto-faça) e “do-while” (faça-enquanto) e supondo que a, b e c foram declaradas anteriormente. \n \nQuais são os valores de a, b e c, após o término de cada trecho, se as variáveis a, b e c foram inicializadas com 3, 0 e 3, respectivamente, antes de cada trecho?", R.id.rbResposta1, "A) 3, 0 e 3   e   2, 1 e 4.", "B) 2, 1 e 1   e   2, 1 e 2.", "C) 1, 2 e 3   e   3, 2 e 3.", "D) 2, 1 e 3   e   1, 2 e 3."));
+            add(new Questao(R.drawable.questao3,"Considere o seguinte algoritmo, onde n é um inteiro positivo lido do teclado \n \nSupondo que as variáveis i e j não sofram alterações no bloco de comandos B, o número total de vezes que B é executado é uma função:", R.id.rbResposta4, "A) Constante;", "B) Logarítmica em n;", "C) Linear em n;", "D) Quadrática em n;"));
+            add(new Questao(R.drawable.questao4, "Sendo a e b variáveis inteiras em um programa, a expressão lógica é equivalente a:", R.id.rbResposta3, "A) (a <= b);", "B) (a >= b);", "C) (a < b);", "D) (a > b);"));
             add(new Questao(R.drawable.questao5, "Considere o código acima:", R.id.rbResposta2, "A) Em um laço de repetição, o controle do número de vezes que o laço será repetido ocorre por meio de variáveis", "B) Em um laço de repetição, o controle do número de vezes que o laço será repetido ocorre por meio de operadores lógicos.", "C) Opção A e B.", "D) Nenhuma das alternativas."));
-            add(new Questao(R.drawable.logo, "Mamãe, no céu tem pão?", R.id.rbResposta3, "E sobreviveu", "E viveu", "E morreu", "E faleceu"));
-            add(new Questao(R.drawable.logo, "Hoje eu vim falar de um assunto polêmico..", R.id.rbResposta4, "Nádegas", "Olhos", "Mãos", "Mamilos"));
-            add(new Questao(R.drawable.logo, "Complete a frase segundo Gilderlan. E depois.. tem:", R.id.rbResposta1, "Xenhenhenhenhem", "Nheco Nheco", "Nananananana", "Um furdunço"));
-            add(new Questao(R.drawable.logo, "Qual é o nome artístico dessa maravilhosa criatura?", R.id.rbResposta2, "Lohane Vêkanandre Gisele Gavião da Portela de bala Halls", "Lohane Vêkanandre Sthephany Smith Bueno de HA HA HA de Raio Laser bala de Icekiss", "Lohane Vêkanandre Bueno de HA HA HA de Raio Laser de bala Mentos", "Lohane Vêkanandre Sthephany Smith Brasil de Paitê"));
-            add(new Questao(R.drawable.logo, "Qual o refrão da música que essa missionária estava cantando?", R.id.rbResposta3, "Sem Jesus não viverão!", "Jesus é bom o tempo todo", "O sangue de Jesus tem poder!", "O sangue de Jesus é maravilhosooooo!"));
+            add(new Questao(R.drawable.questao6, "Qual a definição de bubble sort está correta?", R.id.rbResposta3, "A) O princípio do Bubblesort é a troca de vetores entre posições separadas, fazendo com que os valores mais altos ( ou mais baixos ) \"borbulhem\" para o final do arranjo (daí o nome Bubblesort).", "B) O princípio do Bubblesort é o agrupamento de valores entre posições consecutivas, fazendo com que os valores mais altos ( ou mais baixos ) \"borbulhem\" para o final do arranjo (daí o nome Bubblesort).", "C) O princípio do Bubblesort é a troca de valores entre posições consecutivas, fazendo com que os valores mais altos ( ou mais baixos ) \"borbulhem\" para o final do arranjo (daí o nome Bubblesort).", "D) Nenhuma das alternativas"));
+            add(new Questao(R.drawable.questao7, "Qual o valor de a na seguinte expressão:", R.id.rbResposta3, "A) true;", "B) false;", "C) 20.", "D) 10."));
+            add(new Questao(R.drawable.questao8, "Qual o nome dado a estrutura utilizada para gravar as características de uma classe?", R.id.rbResposta4, "A) Método.", "B) Caracter.", "C) Query.", "D) Atributo."));
+            add(new Questao(R.drawable.questao9, "Qual o tipo de retorno do método abaixo?", R.id.rbResposta1, "A) Vazio.", "B) String.", "C) Estático.", "D) Público."));
+            add(new Questao(R.drawable.questao10, "O que está sendo impresso?", R.id.rbResposta1, "A) [1,11,21,31,41,51,61,71,81,91,101,111,121,131,141,151,161,171,181,191];", "B) [1,11,21,31,41,51,61,71,81,91,101,111,112,131,141,151,161,171,181,191];", "C) [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];", "D) Nenhuma das anteriores."));
 
 
         }
@@ -79,7 +79,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private void carregarQuestao(){
 
-        // embaralhar(questoes);
+        embaralhar(questoes);
 
         if(questoes.size() > 0) {
             Questao q = questoes.remove(0);
