@@ -36,8 +36,6 @@ public class QuizActivity extends AppCompatActivity {
             add(new Questao(R.drawable.questao8, "Qual o nome dado a estrutura utilizada para gravar as características de uma classe?", R.id.rbResposta4, "A) Método.", "B) Caracter.", "C) Query.", "D) Atributo."));
             add(new Questao(R.drawable.questao9, "Qual o tipo de retorno do método abaixo?", R.id.rbResposta1, "A) Vazio.", "B) String.", "C) Estático.", "D) Público."));
             add(new Questao(R.drawable.questao10, "O que está sendo impresso?", R.id.rbResposta1, "A) [1,11,21,31,41,51,61,71,81,91,101,111,121,131,141,151,161,171,181,191];", "B) [1,11,21,31,41,51,61,71,81,91,101,111,112,131,141,151,161,171,181,191];", "C) [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];", "D) Nenhuma das anteriores."));
-
-
         }
     };
 
@@ -49,7 +47,7 @@ public class QuizActivity extends AppCompatActivity {
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         imgPergunta = (ImageView)findViewById(R.id.imgPergunta);
-        pergunta = (TextView)findViewById(R.id.pergunta);
+        pergunta    = (TextView)findViewById(R.id.pergunta);
         rgRespostas = (RadioGroup)findViewById(R.id.rgRespostas);
         rbResposta1 = (RadioButton)findViewById(R.id.rbResposta1);
         rbResposta2 = (RadioButton)findViewById(R.id.rbResposta2);
@@ -78,9 +76,9 @@ public class QuizActivity extends AppCompatActivity {
             rgRespostas.clearCheck();
         } else {
             AlertDialog alertDialog = new AlertDialog.Builder(QuizActivity.this).create();
-            alertDialog.setTitle("Ateção");
-            alertDialog.setMessage("Você deve marcar pelo menos uma opção!");
-            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+            alertDialog.setTitle("Atenção");
+            alertDialog.setMessage("Você deve marcar pelo menos uma opção");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "Ok",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
