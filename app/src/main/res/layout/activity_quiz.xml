@@ -19,7 +19,8 @@
         android:text="Pergunta"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        android:textSize="14sp"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rgRespostas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,13 +31,14 @@
 
     <Button
         android:id="@+id/btnResponder"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:background="@android:color/background_dark"
         android:onClick="btnResponderOnClick"
         android:text="Responder"
         android:textColor="@android:color/background_light"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +54,7 @@
         android:layout_marginBottom="18dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:contentDescription=""
         app:layout_constraintBottom_toTopOf="@+id/pergunta"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +76,7 @@
         android:layout_marginStart="7dp"
         app:layout_constraintBottom_toTopOf="@+id/btnResponder"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pergunta"
         tools:layout_constraintBottom_creator="1"
@@ -89,7 +91,7 @@
             android:layout_weight="1"
             android:checked="false"
             android:text="RadioButton"
-            android:textSize="12sp" />
+            android:textSize="15sp" />
 
         <RadioButton
             android:id="@+id/rbResposta2"
@@ -97,7 +99,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="RadioButton"
-            android:textSize="12sp"
+            android:textSize="15sp"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="-114dp" />
 
@@ -107,7 +109,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="RadioButton"
-            android:textSize="12sp" />
+            android:textSize="15sp" />
 
         <RadioButton
             android:id="@+id/rbResposta4"
@@ -115,7 +117,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="RadioButton"
-            android:textSize="12sp" />
+            android:textSize="15sp" />
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>
